@@ -1,4 +1,6 @@
 package com.example.bdget.model;
+import org.springframework.hateoas.RepresentationModel;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +11,7 @@ import jakarta.validation.constraints.*;
 
 @Entity
 @Table(name = "student")
-public class Student {
+public class Student extends RepresentationModel<Student>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
