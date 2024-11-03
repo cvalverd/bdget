@@ -5,6 +5,6 @@ cloud:
       secret-key: <secret_key>
       session-token: <session_token>
     region:
-      static: us-east-1
+      static: <region>
     stack:
       auto: false
