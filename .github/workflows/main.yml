@@ -3,10 +3,10 @@ name: Build and Push Docker Image
 on: 
   push:
     branches:
-      - main   
+      - s3-securitizado 
   pull_request:
     branches:
-      - main
+      - s3-securitizado
 
 jobs:
   build:
