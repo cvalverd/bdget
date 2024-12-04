@@ -47,7 +47,8 @@ public class AwsController {
     }
 
     @GetMapping("/downloadS3File")
-    public ResponseEntity<ByteArrayResource> downloadS3File(@RequestParam(value = "bucketName") String bucketName, @RequestParam(value = "filePath") String filePath, @RequestParam(value = "fileName") String fileName)
+    public ResponseEntity<ByteArrayResource> downloadS3File(@RequestParam(value = "bucketName") String bucketName, @RequestParam(value = "filePath") String filePath, 
+    @RequestParam(value = "fileName") String fileName)
             throws IOException {
         byte[] data = awsService.downloadFile(bucketName, fileName);
         ByteArrayResource resource = new ByteArrayResource(data);
@@ -75,7 +76,8 @@ public class AwsController {
 
 
     @PostMapping("/uploadFile")
-    public ResponseEntity<String> uploadFile(@RequestParam(value = "bucketName") String bucketName, @RequestParam(value = "filePath") String filePath, @RequestParam(value = "file") MultipartFile file) {
+    public ResponseEntity<String> uploadFile(@RequestParam(value = "bucketName") String bucketName, @RequestParam(value = "filePath") String filePath, 
+    @RequestParam(value = "file") MultipartFile file) {
         return new ResponseEntity<>(awsService.uploadFile(bucketName, filePath, file), HttpStatus.OK);
     }
 
