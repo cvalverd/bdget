@@ -6,7 +6,7 @@ on:
       - s3-securitizado 
   pull_request:
     branches:
-      - s3-securitizado
+      - s3-securitizado 
 
 jobs:
   build:
