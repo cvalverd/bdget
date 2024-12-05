@@ -95,6 +95,6 @@ jobs:
             # Parar y eliminar cualquier contenedor previo
             docker stop my-app || true && docker rm my-app || true
             # Iniciar el contenedor
-            docker run -d --name my-app -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
+            docker run -d --name my-app --network host ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
           EOF
   
