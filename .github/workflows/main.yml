@@ -96,5 +96,6 @@ jobs:
             docker stop my-app || true && docker rm my-app || true
             # Iniciar el contenedor
             docker run -d --name my-app --network host ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
+
           EOF
   
