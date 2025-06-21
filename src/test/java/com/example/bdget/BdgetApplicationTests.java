@@ -6,8 +6,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class BdgetApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+        @Test
+        void contextLoads() {
+                BdgetApplication.main(new String[]{});
+        }
 
 }
